@@ -3,3 +3,7 @@ services:
     type: vite
     env:
       - NODE_ENV=production
+
+scripts:
+  - name: start
+    script: npm run dev
