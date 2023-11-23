@@ -18,7 +18,7 @@ const getUserName = () => {
   return userName
 }
 
-const socket = io('/')
+const socket = io('https://chathosteado-production.up.railway.app/')
 
 function Chat() {
   const obtainHour = () => {
