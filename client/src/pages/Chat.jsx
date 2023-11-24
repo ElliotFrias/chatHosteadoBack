@@ -45,14 +45,18 @@ function Chat() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newMessage = {
-      body: message,
-      from: getUserName(),
-      hour: obtainHour(),
+    if (message === '') {
+      return
+    } else {
+      const newMessage = {
+        body: message,
+        from: getUserName(),
+        hour: obtainHour(),
+      }
+      setMessages((state) => [...state, newMessage])
+      setMessage('')
+      socket.emit('message', newMessage)
     }
-    setMessages((state) => [...state, newMessage])
-    setMessage('')
-    socket.emit('message', newMessage)
   }
 
   useEffect(() => {
@@ -300,7 +304,7 @@ function Chat() {
               />
               <div className="right-messages">
                 <button type="submit" className="btn-send">
-                  <LuSendHorizonal/>
+                  <LuSendHorizonal />
                 </button>
               </div>
             </div>
