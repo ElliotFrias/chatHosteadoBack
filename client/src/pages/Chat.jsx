@@ -264,7 +264,7 @@ function Chat() {
                 className="profile-picture-contact"
                 src="css/img/fotoPerfil.jpeg"
               />
-              <h3 className="contact-name">Grupo Chingonsote</h3>
+              <h3 className="contact-name">Grupo</h3>
             </div>
             <div className="right-options">
               <IoVideocamOutline className="videocall-Icon" />
