@@ -8,7 +8,7 @@ function Home() {
   const [userName, setUserName] = useState('')
 
   const handleSubmit = (e) => {
-    if (userName === '') {
+    if (userName === '' || userName.endsWith(' ')) {
       return
     } else {
       e.preventDefault()

@@ -45,7 +45,7 @@ function Chat() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (message === '') {
+    if (message === '' || message.endsWith(' ')) {
       return
     } else {
       const newMessage = {
